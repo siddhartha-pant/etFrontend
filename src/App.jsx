@@ -127,7 +127,7 @@ const App = () => {
 
         if (storedToken) {
           try {
-            const res = await axios.get(`${API_URL}/api/user/me`, {
+            const res = await axios.get(`${API_URL}api/user/me`, {
               headers: { Authorization: `Bearer ${storedToken}` },
             });
             const profile = res.data;

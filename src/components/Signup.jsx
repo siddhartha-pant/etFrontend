@@ -20,7 +20,7 @@ const Signup = ({
   // to fetch profile
   const fetchProfile = async (token) => {
     if (!token) return null;
-    const res = await axios.get(`${API_URL}/api/user/me`, {
+    const res = await axios.get(`${API_URL}api/user/me`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     return res.data;
@@ -67,7 +67,7 @@ const Signup = ({
     setIsLoading(true);
     try {
       const res = await axios.post(
-        `${API_URL}/api/user/register`,
+        `${API_URL}api/user/register`,
         { name, email, password },
         { headers: { "Content-Type": "application/json" } },
       );
